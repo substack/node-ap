@@ -24,3 +24,8 @@ exports.curry = function (fn) {
     var args = [].slice.call(arguments, 1);
     return exports.ap(args, fn);
 };
+
+exports.curryRight = function (fn) {
+    var args = [].slice.call(arguments, 1);
+    return exports.pa(args, fn);
+};
