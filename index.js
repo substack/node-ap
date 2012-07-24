@@ -2,8 +2,9 @@ exports = module.exports = ap;
 function ap (args, fn) {
     return function () {
         var rest = [].slice.call(arguments)
-        args.push.apply(args, rest)
-        return fn.apply(this, args);
+            , first = args.slice()
+        first.push.apply(first, rest)
+        return fn.apply(this, first);
     };
 }
 
