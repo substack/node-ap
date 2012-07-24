@@ -1,14 +1,19 @@
 exports = module.exports = ap;
 function ap (args, fn) {
     return function () {
-        return fn.apply(this, args.concat.apply(args, arguments));
+        var rest = [].slice.call(arguments)
+            , first = args.slice()
+        first.push.apply(first, rest)
+        return fn.apply(this, first);
     };
 }
 
 exports.pa = pa;
 function pa (args, fn) {
     return function () {
-        return fn.apply(this, [].slice.call(arguments).concat(args));
+        var rest = [].slice.call(arguments)
+        rest.push.apply(rest, args)
+        return fn.apply(this, rest);
     };
 }
 
