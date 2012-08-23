@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/substack/node-ap.png)](http://travis-ci.org/substack/node-ap)
 ap
 ==
 
