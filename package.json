@@ -1,6 +1,6 @@
 {
     "name" : "ap",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "description" : "Currying in javascript. Like .bind() without also setting `this`.",
     "main" : "./index.js",
     "directories" : {
